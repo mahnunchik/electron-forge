@@ -37,12 +37,17 @@ export default class PublisherGCS extends PublisherBase<PublisherGCSConfig> {
     const clientEmail = config.clientEmail || process.env.GOOGLE_CLOUD_CLIENT_EMAIL;
     const privateKey = config.privateKey || process.env.GOOGLE_CLOUD_PRIVATE_KEY;
 
-    const storage = new Storage({
-      keyFilename: config.projectId || process.env.GOOGLE_APPLICATION_CREDENTIALS,
-      credentials: (clientEmail && privateKey) ? {
+    let credentials;
+    if (clientEmail && privateKey) {
+      credentials = {
         client_email: clientEmail,
         private_key: privateKey,
-      } : undefined,
+      };
+    }
+
+    const storage = new Storage({
+      keyFilename: config.projectId || process.env.GOOGLE_APPLICATION_CREDENTIALS,
+      credentials,
       projectId: config.projectId || process.env.GOOGLE_CLOUD_PROJECT,
     });
 
