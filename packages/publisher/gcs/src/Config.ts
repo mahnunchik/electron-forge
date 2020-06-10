@@ -1,45 +1,45 @@
 export interface PublisherGCSConfig {
   /**
-   * The file path to the .json file that contains your Google service account credentials
-   * or .pem  or .p12 file that contains private key
+   * The path to the file that is either:
+   * - the JSON file that contains your Google service account credentials, or
+   * - the PEM/PKCS #12-formatted file that contains the private key.
    *
-   * Falls back to the GOOGLE_APPLICATION_CREDENTIALS environment variable if not provided
+   * Defaults to the value in the `GOOGLE_APPLICATION_CREDENTIALS` environment variable.
    */
   keyFilename?: string;
   /**
-   * Google Cloud project ID
+   * The Google Cloud project ID.
    *
-   * Falls back to the GOOGLE_CLOUD_PROJECT environment variable if not provided
+   * Defaults to the value in the `GOOGLE_CLOUD_PROJECT` environment variable.
    * */
   projectId?: string,
   /**
-   * The email of your Google service account, required when using a .pem or .p12 keyFilename
+   * The email for your Google service account, *required* when using a PEM/PKCS #12-formatted
+   * file in the [[keyFilename]] option.
    *
-   * Falls back to the GOOGLE_CLOUD_CLIENT_EMAIL environment variable if not provided
+   * Defaults to the value in the `GOOGLE_CLOUD_CLIENT_EMAIL` environment variable.
    */
   clientEmail?: string;
   /**
-   * The private key of your Google service account
+   * The private key for your Google service account.
    *
-   * Falls back to the GOOGLE_CLOUD_PRIVATE_KEY environment variable if not provided
+   * Defaults to the value in the `GOOGLE_CLOUD_PRIVATE_KEY` environment variable.
    */
   privateKey?: string;
   /**
-   * The name of the Google Cloud Storage bucket to upload artifacts to
+   * The name of the Google Cloud Storage bucket where artifacts are uploaded.
    */
   bucket?: string;
   /**
-   * The key prefix to upload artifacts to.
+   * The key prefix where artifacts are uploaded, e.g., `my/prefix`.
    *
-   * E.g. `my/prefix`
-   *
-   * Default: appVersion
+   * Defaults to the application `version` specified in the app's `package.json`.
    */
   folder?: string;
   /**
-   * Whether or not to make uploaded artifacts public to the internet
+   * Whether to make uploaded artifacts public to the internet.
    *
-   * Default: false
+   * Defaults to `false`.
    */
   public?: boolean;
   /**

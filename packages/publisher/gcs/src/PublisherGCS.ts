@@ -47,7 +47,7 @@ export default class PublisherGCS extends PublisherBase<PublisherGCSConfig> {
     });
 
     if (!config.bucket) {
-      throw new Error('In order to publish to Google Cloud Storage you must set the "gcs.bucket" properties in your Forge config.');
+      throw new Error('In order to publish to Google Cloud Storage you must set the "gcs.bucket" property in your Forge config.');
     }
     const bucket = storage.bucket(config.bucket);
 
