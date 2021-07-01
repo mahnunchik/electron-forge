@@ -1112,10 +1112,10 @@
     "@octokit/types" "^6.0.0"
     universal-user-agent "^6.0.0"
 
-"@octokit/openapi-types@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@octokit/openapi-types/-/openapi-types-2.0.0.tgz#6d8f8ad9db3b75a39115f5def2654df8bed39f28"
-  integrity sha512-J4bfM7lf8oZvEAdpS71oTvC1ofKxfEZgU5vKVwzZKi4QPiL82udjpseJwxPid9Pu2FNmyRQOX4iEj6W1iOSnPw==
+"@octokit/openapi-types@^8.1.4":
+  version "8.1.4"
+  resolved "https://registry.yarnpkg.com/@octokit/openapi-types/-/openapi-types-8.1.4.tgz#20684667b50176b5d24cdb89799a8a12d38c3775"
+  integrity sha512-NnGr4NNDqO5wjSDJo5nxrGtzZUwoT23YasqK2H4Pav/6vSgeVTxuqCL9Aeh+cWfTxDomj1M4Os5BrXFsvl7qiQ==
 
 "@octokit/plugin-paginate-rest@^2.6.2":
   version "2.6.2"
@@ -1170,13 +1170,12 @@
     "@octokit/plugin-request-log" "^1.0.2"
     "@octokit/plugin-rest-endpoint-methods" "4.4.1"
 
-"@octokit/types@^6.0.0", "@octokit/types@^6.0.1", "@octokit/types@^6.0.3", "@octokit/types@^6.1.0":
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/@octokit/types/-/types-6.1.1.tgz#bc88b3eb5f447b025a2a1a8177a72db216e8d4ca"
-  integrity sha512-btm3D6S7VkRrgyYF31etUtVY/eQ1KzrNRqhFt25KSe2mKlXuLXJilglRC6eDA2P6ou94BUnk/Kz5MPEolXgoiw==
+"@octokit/types@^6.0.0", "@octokit/types@^6.0.1", "@octokit/types@^6.0.3", "@octokit/types@^6.1.0", "@octokit/types@^6.17.4":
+  version "6.17.4"
+  resolved "https://registry.yarnpkg.com/@octokit/types/-/types-6.17.4.tgz#5ec011bfe3d08b7605c7d92a15796c470ee541b6"
+  integrity sha512-Ghk/JC4zC/1al1GwH6p8jVX6pLdypSWmbnx6h79C/yo3DeaDd6MsNsBFlHu22KbkFh+CdcAzFqdP7UdPaPPmmA==
   dependencies:
-    "@octokit/openapi-types" "^2.0.0"
-    "@types/node" ">= 8"
+    "@octokit/openapi-types" "^8.1.4"
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.1"
@@ -1435,7 +1434,7 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@>= 8", "@types/node@^14.14.14":
+"@types/node@*", "@types/node@^14.14.14":
   version "14.14.14"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.14.tgz#f7fd5f3cc8521301119f63910f0fb965c7d761ae"
   integrity sha512-UHnOPWVWV1z+VV8k6L1HhG7UbGBgIdghqF3l9Ny9ApPghbjICXkUJSd/b9gOgQfjM1r+37cipdw/HJ3F6ICEnQ==
